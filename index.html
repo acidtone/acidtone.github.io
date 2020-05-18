@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tony Grimes - Full Stack Developer, Instructor, Pinballer</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js">
+  <link rel="stylesheet" href="core/v0/css/reset.css">
+  <link rel="stylesheet" href="core/v0/css/fonts.css">
+  <link rel="stylesheet" href="core/v0/css/utilities.css">
+  <link rel="stylesheet" href="css/vars.css">
+  <link rel="stylesheet" href="css/main.css">
+  <style>
+    body {
+      background-color: var(--clr-light);
+      color: var(--clr-dark);
+    }
+    h1, h2, p {
+      margin: .1em;
+    }
+    article {
+      background-color: var(--clr-white);
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 0 4px rgba(0,0,0,.25);
+    }
+    a {
+      display: block;
+      padding: .2em 1em;
+      margin: .4em .2em;
+      border-radius: .4em;
+      background-color: var(--clr-dark);
+      text-decoration: none;
+      color: var(--clr-white);
+
+      font-size: .9em;
+    }
+
+    main {
+      width: 90vw;
+      max-width: 1024px;
+      height: 100vmin;
+
+      padding: 2em;
+      margin: auto;
+
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: 2fr 1fr 2fr;
+      grid-auto-flow: dense;
+      grid-gap: 2em;
+    }
+    .tall {
+      grid-row: span 2;
+    }
+    .wide {
+      grid-column: span 2;
+    }
+    #home {
+      grid-column: 2 / 3;
+      grid-row: 2 / 3;
+
+      background-color: var(--clr-medium);
+    }
+
+    #home > div {
+      background-color: white;
+    }
+    
+    #home > div, #thehaps > div {
+      padding: 1.5em;
+      margin: auto;
+    }
+    #pixels {
+      background-image: url('images/pixels.jpg');
+      background-position: center left;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    article > div {
+      background-color: rgba(255,255,255,.8);
+      padding: .25em;
+    }
+
+    #pinball {
+      background-image: url('images/close-drain.svg');
+      background-position: 15ch bottom;
+      background-repeat: no-repeat;
+      background-size: cover;
+
+      justify-content: flex-end;
+
+    }
+    #pinball > div {
+      background-color: transparent;
+    }
+    #blendr {
+      justify-content: flex-end;
+    }
+    #thehaps {
+      background-image: url('images/thehaps.jpg');
+      background-position: top right;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    #blendr {
+      background-image: url('images/blendr-preview.jpg');
+      background-position: center left;
+      background-repeat: no-repeat;
+      background-size: cover;    }
+    
+    ul.horz {
+      justify-content: center;
+    }
+    #pinball ul.horz {
+      justify-content: initial;
+    }
+    ul.horz a::before {
+      font-family: FontAwesome;
+      padding-right: .2em;
+    }
+    .github::before {
+      content: "\f09b";
+    }
+    .pdf::before {
+      content: "\f1c1";
+    }
+    .meetup::before {
+      content: "\f2e0";
+    }
+    .www::before {
+      content: "\f35d";
+    }
+    .patreon::before {
+      content: "\f3d9";
+    }
+    .youtube::before {
+      content: "\f167";
+    }
+    .podcast::before {
+      content: "\f2ce";
+    }
+
+  </style>
+</head>
+<body>
+  <main>
+    <article id="home">
+      <div class="center-inside">
+        <h1>Tony Grimes</h1>
+        <p><code>acidtone@tonygrimes.com</code></p>
+      </div>
+    </article>
+    <article id="pinball" class="wide">
+      <div>  
+        <h2>Cradle to Drain</h2>
+        <p>A pinball zine for beginners.</p>
+        <ul class="horz clear-style">
+          <li><a class="pdf" href="https://github.com/acidtone/cradle2drain/blob/master/pdf/c2d-half-letter.pdf">PDF</a></li>
+          <li><a class="github" href="https://github.com/acidtone/cradle2drain">GitHub</a></li>
+        </ul>
+      </div>
+    </article>
+    <article id="pixels" class="tall center-inside">
+      <div>
+        <h2>Pixels and Pints</h2>
+        <p>Something I started 10 years ago.</p>
+        <ul class="horz clear-style">
+          <li><a class="meetup" href="https://www.meetup.com/pxandpints">Meetup</a></li>
+          <li><a href="https://patreon.com/pixelsyyc">Patreon</a></li>
+        </ul>
+      </div>
+    </article>
+    <article id="blendr" class="tall center-inside">
+      <div>
+        <h2>Blend Mode Visualizer</h2>
+        <p>Play with Tony's favourite CSS property.</p>
+        <ul class="horz clear-style">
+          <li><a class="github" href="https://github.com/acidtone/blendr">GitHub</a></li>
+          <li><a href="https://acidtone.github.io/blendr">Live Site</a></li>
+        </ul>      
+      </div>
+    </article>
+    <article id="thehaps" class="wide center-inside">
+      <div>
+        <h2>The Haps Podcast</h2>
+        <p>A now defunct YYC events podcast.</p>
+        <ul class="horz clear-style">
+          <li><a class="podcast" href="https://thehapscalgary.ca/">Audio Archive</a></li>
+          <li><a class="youtube" href="https://youtu.be/ofQ852h1OQs">Video Sample</a></li>
+        </ul>    
+      </div>
+    </article>
+  </main>
+</body>
+</html>
