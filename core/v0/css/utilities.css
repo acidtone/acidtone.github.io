@@ -49,7 +49,6 @@
 /* limit the line length of a text box */
 .text-box {
   max-width: 80ch;
-  margin: auto;
 }
 
 /**************/
