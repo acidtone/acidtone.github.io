@@ -30,6 +30,14 @@
   grid-column: span 2;
 }
 
+/* two-cell cards */
+.tall {
+  grid-row: span 2;
+}
+.wide {
+  grid-column: span 2;
+}
+
 /* Centre a single element vertically and horizontally on a page */
 .center-child {
   min-height: 100vh;
