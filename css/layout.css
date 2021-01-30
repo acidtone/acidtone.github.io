@@ -1,0 +1,66 @@
+.container {
+  display: grid;
+  gap: 0.5rem;
+  
+  max-width: 70rem;
+  margin: auto;
+  
+  counter-reset: section;
+}
+
+.container > * {
+  background-color: grey;
+  display: flex;
+}
+
+.container > *::before {
+  counter-increment: section;
+  content: counter(section);
+  
+  color: white;
+  margin: auto;
+}
+
+@media screen and (min-width: 40rem) {
+  .container {
+    grid-template-columns: 1fr 1fr;
+  }
+  .contact {
+    grid-column: span 2;
+  }
+}
+
+@media screen and (min-width: 60rem) {
+  .container {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    
+    min-height: 100vh;
+  }
+  
+  .tall {
+    grid-row: span 2;
+  }
+  
+  .wide {
+    grid-column: span 2;
+  }
+  
+  /* Arrange contact cell to the center. */
+  .container > *:nth-child(1){
+    grid-column: initial;
+    order: 4;
+  }
+  .container > *:nth-child(2) {
+    order: 1;
+  }
+  .container > *:nth-child(3) {
+    order: 2;
+  }
+  .container > *:nth-child(4) {
+    order: 5;
+  }
+  .container > *:nth-child(5) {
+    order: 3;
+  }
+}
