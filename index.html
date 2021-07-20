@@ -11,32 +11,51 @@
   <link rel="stylesheet" href="css/vars.css">
   <link rel="stylesheet" href="css/main.css">
   <style>
+
+    /* Hero section */
+
     body {
       background-color: var(--clr-light);
       color: var(--clr-dark);
     }
+
     h1, h2, p {
       margin: .1em;
     }
+
     article {
-      background-color: var(--clr-white);
       display: flex;
       flex-direction: column;
+
+      background-color: var(--clr-white);
       box-shadow: 0 0 4px rgba(0,0,0,.25);
     }
+
     a {
+      /* TODO: add to reset? */
       display: block;
+
+      /* TODO: convert all em to rem? */
       padding: .2em 1em;
       margin: .4em .2em;
+
       border-radius: .4em;
+      /* TODO: import Flexbox default colour scheme */
+      /* https://gist.github.com/acidtone/d946ea7147e60568d7f8262b5e7be449 */ 
       background-color: var(--clr-dark);
+      
       text-decoration: none;
       color: var(--clr-white);
-
       font-size: .9em;
     }
 
     main {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: 2fr 1fr 2fr;
+      grid-auto-flow: dense;
+      grid-gap: 2em;
+
       width: 90vw;
       max-width: 1024px;
       height: 100vmin;
@@ -44,12 +63,9 @@
       padding: 2em;
       margin: auto;
 
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
-      grid-template-rows: 2fr 1fr 2fr;
-      grid-auto-flow: dense;
-      grid-gap: 2em;
     }
+
+    /* TODO: move to utilities */
     .tall {
       grid-row: span 2;
     }
@@ -57,8 +73,13 @@
       grid-column: span 2;
     }
 
-    /* TODO: Refactor the ugly IDs -> untility classes. */
+    /* TODO: Refactor the ugly IDs -> utility classes. */
+    /* 
+    TODO: Re-think the cards. Choose some sample code from MDN 
+    https://developer.mozilla.org/en-US/docs/Web/CSS/Layout_cookbook/Card
+    */
     #home {
+      /* TODO: mobile-first! */
       grid-column: 2 / 3;
       grid-row: 2 / 3;
 
@@ -76,6 +97,7 @@
     #pixels {
       background-image: url('images/pixels.jpg');
       background-position: center left;
+      /* Add to reset? */
       background-repeat: no-repeat;
       background-size: cover;
     }
@@ -113,6 +135,7 @@
       background-repeat: no-repeat;
       background-size: cover;    }
     
+    /* TODO: rename to .hnav */
     ul.horz {
       justify-content: center;
     }
@@ -123,6 +146,8 @@
       font-family: FontAwesome;
       padding-right: .2em;
     }
+
+    /* TODO: fix the links; try another method for icons */
     .github::before {
       content: "\f09b";
     }
@@ -149,6 +174,11 @@
 </head>
 <body>
   <main>
+    <!-- TODO: Switch to `figure`/`figcaption`? -->
+    <!-- 
+      TODO: New card content needed 
+      https://github.com/acidtone/acidtone.github.io/projects/1
+    -->
     <article id="home">
       <div class="center-inside">
         <h1>Tony Grimes</h1>
